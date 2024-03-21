@@ -44,9 +44,9 @@ class TaskListViewModel: ObservableObject {
         }
     }
     
-    func toggleFav(task: Task) {
+    func toggleTask(task: Task) {
         do {
-            try repository.toggleFav(task: task)
+            try repository.toggleTask(task: task)
             fetchTasks()
         } catch {
             handleDatabaseError()
@@ -54,8 +54,8 @@ class TaskListViewModel: ObservableObject {
     }
     
     private func handleDatabaseError() {
-        var errorText = "Fehler beim Datenbankzugriff!"
-        print(errortext)
+        let errorText = "Fehler beim Datenbankzugriff!"
+        print(errorText)
     }
     
 }

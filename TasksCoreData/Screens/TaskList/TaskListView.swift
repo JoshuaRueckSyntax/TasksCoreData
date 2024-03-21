@@ -17,11 +17,26 @@ struct TaskListView: View {
                 List(viewModel.tasks, id: \.self) { task in
                     HStack {
                         Button {
-                            viewModel.toggleFav(task: task)
+                            viewModel.toggleTask(task: task)
                         } label: {
                             Image(systemName: task.completed ? "checkmark.circle" : "circle")
                         }
                         Text(task.title ?? "")
+                        Spacer()
+                        Group {
+                            if let picture = task.person?.picture {
+                                Image(picture)
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                            } else {
+                                Image(systemName: "person.badge.plus")
+                            }
+                        }
+                        .onTapGesture {
+                            #warning("ToDo: Person zu Task hinzufügen implementieren")
+                        }
+                        
+                        
                     }
                     .swipeActions {
                         Button(role: .destructive) {
@@ -30,6 +45,7 @@ struct TaskListView: View {
                             Label("Trash", systemImage: "trash")
                         }
                     }
+                    
                 }
                 .navigationTitle("Tasks")
                 

@@ -16,6 +16,9 @@
 		4D8FEC722BAB2BE1007B818A /* TaskModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FEC702BAB2BE1007B818A /* TaskModel.xcdatamodeld */; };
 		4D8FEC742BAB2BF0007B818A /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FEC732BAB2BF0007B818A /* TaskListView.swift */; };
 		4D8FEC762BAB2C01007B818A /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FEC752BAB2C01007B818A /* TaskListViewModel.swift */; };
+		4D8FEC7D2BAC2CA6007B818A /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FEC7C2BAC2CA6007B818A /* PeopleListView.swift */; };
+		4D8FEC7F2BAC2E4E007B818A /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FEC7E2BAC2E4E007B818A /* SampleData.swift */; };
+		4D8FEC812BAC3334007B818A /* PeopleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FEC802BAC3334007B818A /* PeopleListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		4D8FEC712BAB2BE1007B818A /* TaskModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskModel.xcdatamodel; sourceTree = "<group>"; };
 		4D8FEC732BAB2BF0007B818A /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		4D8FEC752BAB2C01007B818A /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
+		4D8FEC7C2BAC2CA6007B818A /* PeopleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListView.swift; sourceTree = "<group>"; };
+		4D8FEC7E2BAC2E4E007B818A /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		4D8FEC802BAC3334007B818A /* PeopleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		4D8FEC692BAB2B7E007B818A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				4D8FEC7B2BAC2C93007B818A /* People */,
 				4D8FEC772BAB2C05007B818A /* TaskList */,
 			);
 			path = Screens;
@@ -92,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				4D8FEC702BAB2BE1007B818A /* TaskModel.xcdatamodeld */,
+				4D8FEC7E2BAC2E4E007B818A /* SampleData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -112,6 +120,15 @@
 				4D8FEC752BAB2C01007B818A /* TaskListViewModel.swift */,
 			);
 			path = TaskList;
+			sourceTree = "<group>";
+		};
+		4D8FEC7B2BAC2C93007B818A /* People */ = {
+			isa = PBXGroup;
+			children = (
+				4D8FEC7C2BAC2CA6007B818A /* PeopleListView.swift */,
+				4D8FEC802BAC3334007B818A /* PeopleListViewModel.swift */,
+			);
+			path = People;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,9 +204,12 @@
 				4D8FEC762BAB2C01007B818A /* TaskListViewModel.swift in Sources */,
 				4D8FEC722BAB2BE1007B818A /* TaskModel.xcdatamodeld in Sources */,
 				4D8FEC5E2BAB2B70007B818A /* ContentView.swift in Sources */,
+				4D8FEC7D2BAC2CA6007B818A /* PeopleListView.swift in Sources */,
 				4D8FEC5C2BAB2B70007B818A /* TasksCoreDataApp.swift in Sources */,
 				4D8FEC6F2BAB2BCB007B818A /* PersistentStore.swift in Sources */,
 				4D8FEC6D2BAB2BB9007B818A /* Repository.swift in Sources */,
+				4D8FEC812BAC3334007B818A /* PeopleListViewModel.swift in Sources */,
+				4D8FEC7F2BAC2E4E007B818A /* SampleData.swift in Sources */,
 				4D8FEC742BAB2BF0007B818A /* TaskListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

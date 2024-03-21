@@ -15,6 +15,7 @@ class Repository {
     
     private init(){}
     
+    // Tasks
     func fetchTasks() throws -> [Task]{
         let request = Task.fetchRequest()
         return try store.context.fetch(request)
@@ -33,8 +34,28 @@ class Repository {
         try store.save()
     }
     
-    func toggleFav(task: Task) throws {
+    func toggleTask(task: Task) throws {
         task.completed.toggle()
+        
+        try store.save()
+    }
+    
+    // People
+    func fetchPeople() throws -> [Person] {
+        let request = Person.fetchRequest()
+        return try store.context.fetch(request)
+    }
+    
+    func addPerson() throws {
+        let newPerson = Person(context: store.context)
+        newPerson.name = SampleData().randomName
+        newPerson.picture = SampleData().randomPic
+        
+        try store.save()
+    }
+    
+    func deletePerson(person: Person) throws {
+        store.context.delete(person)
         
         try store.save()
     }
